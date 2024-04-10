@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -8,7 +8,7 @@ function Navigation() {
     <>
       <Navbar expand="md" bg="light">
         <Container>
-          <Link className="navbar-brand" to="/">
+          <NavLink className="navbar-brand" to="/">
             <div className="d-inline-flex align-items-center gap-1">
               <img
                 src="/images/bank.png"
@@ -19,22 +19,22 @@ function Navigation() {
               ></img>
               <span>BadBank</span>
             </div>
-          </Link>
+          </NavLink>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Link className="nav-link" to="/createaccount">
+              <NavLink className="nav-link" to="/createaccount">
                 Create Account
-              </Link>
-              <Link className="nav-link" to="/deposit">
+              </NavLink>
+              <NavLink className="nav-link" to="/deposit">
                 Deposit
-              </Link>
-              <Link className="nav-link" to="/withdraw">
+              </NavLink>
+              <NavLink className="nav-link" to="/withdraw">
                 Withdraw
-              </Link>
-              <Link className="nav-link" to="/alldata">
+              </NavLink>
+              <NavLink className="nav-link" to="/alldata">
                 AllData
-              </Link>
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>
