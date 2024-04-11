@@ -12,7 +12,6 @@ export default function CreateAccount() {
       password: data.password,
       balance: 100,
     });
-    console.log(context.users);
 
     return true;
   }

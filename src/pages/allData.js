@@ -10,7 +10,7 @@ export default function AllData() {
       <h5>All Data in Store</h5>
       <div className="row">
         {context.users.map((user) => (
-          <div key={user.id} className="col-md-5 col-lg-4 mb-4">
+          <div key={user.name} className="col-md-5 col-lg-4 mb-4">
             <CustomCard
               header={user.name}
               txtcolor="dark"

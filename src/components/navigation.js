@@ -1,9 +1,17 @@
 import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
+import Tooltip from "react-bootstrap/Tooltip";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Navbar from "react-bootstrap/Navbar";
 
 function Navigation() {
+  const renderTooltip = (props) => (
+    <Tooltip id="button-tooltip" {...props}>
+      {props === undefined ? "" : props}
+    </Tooltip>
+  );
+
   return (
     <>
       <Navbar expand="md" bg="light">
@@ -23,29 +31,59 @@ function Navigation() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <NavLink
-                className="nav-link create-account-link"
-                to="/createaccount"
+              <OverlayTrigger
+                placement="bottom"
+                delay={{ show: 250, hide: 400 }}
+                overlay={renderTooltip("Create a new account")}
               >
-                Create Account
-              </NavLink>
-              <NavLink className="nav-link" to="/deposit">
-                Deposit
-              </NavLink>
-              <NavLink className="nav-link" to="/withdraw">
-                Withdraw
-              </NavLink>
-              <NavLink className="nav-link" to="/alldata">
-                All Data
-              </NavLink>
+                <NavLink
+                  className="nav-link create-account-link"
+                  to="/createaccount"
+                >
+                  Create Account
+                </NavLink>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="bottom"
+                delay={{ show: 250, hide: 400 }}
+                overlay={renderTooltip("View balance and make a deposit")}
+              >
+                <NavLink className="nav-link" to="/deposit">
+                  Deposit
+                </NavLink>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="bottom"
+                delay={{ show: 250, hide: 400 }}
+                overlay={renderTooltip("View balance and make a withdrawal")}
+              >
+                <NavLink className="nav-link" to="/withdraw">
+                  Withdraw
+                </NavLink>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="bottom"
+                delay={{ show: 250, hide: 400 }}
+                overlay={renderTooltip("View all data stored in the bank")}
+              >
+                <NavLink className="nav-link" to="/alldata">
+                  All Data
+                </NavLink>
+              </OverlayTrigger>
             </Nav>
           </Navbar.Collapse>
-          <NavLink
-            className="btn btn-primary create-account-btn"
-            to="/createaccount"
+          <OverlayTrigger
+            placement="bottom"
+            delay={{ show: 250, hide: 400 }}
+            overlay={renderTooltip("Create a new account")}
           >
-            Create Account
-          </NavLink>
+            <NavLink
+              className="btn btn-primary create-account-btn"
+              to="/createaccount"
+            >
+              Create Account
+            </NavLink>
+          </OverlayTrigger>
         </Container>
       </Navbar>
     </>

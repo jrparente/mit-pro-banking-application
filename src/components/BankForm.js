@@ -3,95 +3,112 @@ import CustomCard from "./CustomCard";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-export default function BankForm(props) {
-  const [show, setShow] = useState(true);
-  const [status, setStatus] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [validated, setValidated] = useState(false);
+export default function BankForm({
+  bgcolor,
+  txtcolor,
+  label,
+  successButton,
+  handleCreateAccount,
+}) {
+  const initialState = {
+    name: "",
+    email: "",
+    password: "",
+    validated: false,
+    status: "",
+    show: true,
+  };
+
+  const [formData, setFormData] = useState(initialState);
+
+  const { name, email, password, validated, status, show } = formData;
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+    setFormData((prevState) => ({
+      ...prevState,
+      validated:
+        prevState.name !== "" &&
+        prevState.email !== "" &&
+        prevState.password.length >= 8,
+    }));
+  }
 
   function handleSubmit(event) {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-    setValidated(true);
-    props.handleCreateAccount({ name, email, password });
-    setStatus("Account created");
+    event.preventDefault();
 
-    setShow(false);
+    handleCreateAccount({ name, email, password });
+    setFormData({ ...formData, status: "Account created", show: false });
   }
 
   function clearForm() {
-    setName("");
-    setEmail("");
-    setPassword("");
-    setShow(true);
+    setFormData(initialState);
   }
+
+  const renderForm = () => (
+    <Form noValidate validated={validated} onSubmit={handleSubmit}>
+      <Form.Group className="mb-3" controlId="formBasicName">
+        <Form.Label>Name</Form.Label>
+        <Form.Control
+          required
+          type="text"
+          placeholder="Enter name"
+          value={name}
+          onChange={handleChange}
+          name="name"
+        />
+        <Form.Control.Feedback type="invalid">
+          Please enter a name.
+        </Form.Control.Feedback>
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control
+          required
+          type="email"
+          placeholder="Enter email"
+          value={email}
+          onChange={handleChange}
+          name="email"
+        />
+        <Form.Control.Feedback type="invalid">
+          Please enter a valid email.
+        </Form.Control.Feedback>
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control
+          required
+          type="password"
+          placeholder="Enter password"
+          value={password}
+          onChange={handleChange}
+          name="password"
+        />
+        <Form.Control.Feedback type="invalid">
+          Please enter a password.
+        </Form.Control.Feedback>
+      </Form.Group>
+      <Button type="submit" variant="primary" disabled={!validated}>
+        {label}
+      </Button>
+    </Form>
+  );
 
   return (
     <CustomCard
-      bgcolor={props.bgcolor}
-      txtcolor={props.txtcolor}
-      header={props.label}
+      bgcolor={bgcolor}
+      txtcolor={txtcolor}
+      header={label}
       status={status}
       body={
         show ? (
-          <Form noValidate validated={validated} onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicName">
-              <Form.Label>Name</Form.Label>
-              <Form.Control
-                required
-                type="text"
-                placeholder="Enter name"
-                value={name}
-                onChange={(e) => setName(e.currentTarget.value)}
-              />
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control
-                required
-                type="email"
-                placeholder="Enter email"
-                value={email}
-                onChange={(e) => setEmail(e.currentTarget.value)}
-              />
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                required
-                type="password"
-                placeholder="Enter password"
-                value={password}
-                onChange={(e) => setPassword(e.currentTarget.value)}
-              />
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-            </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Check
-                required
-                label="Agree to terms and conditions"
-                feedback="You must agree before submitting."
-                feedbackType="invalid"
-              />
-            </Form.Group>
-            <Button type="submit" variant="primary">
-              {props.label}
-            </Button>
-          </Form>
+          renderForm()
         ) : (
-          <>
-            <h5>Success</h5>
-            <Button type="submit" variant="primary" onClick={clearForm}>
-              {props.successButton}
-            </Button>
-          </>
+          <Button type="submit" variant="primary" onClick={clearForm}>
+            {successButton}
+          </Button>
         )
       }
     />
