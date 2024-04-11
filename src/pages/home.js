@@ -17,9 +17,9 @@ export default function Home() {
             >
               Create Account
             </Link>
-            <Link to="/login" className="btn btn-outline-secondary btn-lg px-4">
+            {/* <Link to="/login" className="btn btn-outline-secondary btn-lg px-4">
               Login
-            </Link>
+            </Link> */}
           </div>
         </div>
         <div className="col-lg-4 offset-lg-1 p-0 overflow-hidden">

@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.create-account-btn {
+  @media screen and (max-width: 768px) {
+    display: none;
+
+  }
+}
+
+.create-account-link {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}

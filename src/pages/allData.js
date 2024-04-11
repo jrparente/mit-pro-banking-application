@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import UserContext from "../context/UserContext";
-import { Card } from "react-bootstrap";
+import CustomCard from "../components/CustomCard";
 
 export default function AllData() {
   const context = useContext(UserContext);
@@ -11,16 +11,17 @@ export default function AllData() {
       <div className="row">
         {context.users.map((user) => (
           <div key={user.id} className="col-md-5 col-lg-4 mb-4">
-            <Card>
-              <Card.Body>
-                <Card.Title>{user.name}</Card.Title>
-                <Card.Text>
+            <CustomCard
+              header={user.name}
+              txtcolor="dark"
+              body={
+                <div>
                   <strong>Email:</strong> {user.email}
                   <br />
-                  <strong>Balance:</strong> {user.balance}
-                </Card.Text>
-              </Card.Body>
-            </Card>
+                  <strong>Balance:</strong> ${user.balance}
+                </div>
+              }
+            />
           </div>
         ))}
       </div>

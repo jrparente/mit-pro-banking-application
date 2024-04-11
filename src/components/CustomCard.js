@@ -9,13 +9,15 @@ export default function CustomCard(props) {
 
   return (
     <Card className={classes()}>
-      <div className="card-header">{props.header}</div>
-      <div className="card-body">
-        {props.title && <h5 className="card-title">{props.title}</h5>}
-        {props.text && <p className="card-text">{props.text}</p>}
+      <Card.Header>
+        <h5>{props.header}</h5>
+      </Card.Header>
+      <Card.Body>
+        {props.title && <Card.Title>{props.title}</Card.Title>}
+        {props.text && <Card.Text>{props.text}</Card.Text>}
         {props.body}
         {props.status && <div id="createStatus">{props.status}</div>}
-      </div>
+      </Card.Body>
     </Card>
   );
 }

@@ -23,7 +23,10 @@ function Navigation() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <NavLink className="nav-link" to="/createaccount">
+              <NavLink
+                className="nav-link create-account-link"
+                to="/createaccount"
+              >
                 Create Account
               </NavLink>
               <NavLink className="nav-link" to="/deposit">
@@ -33,10 +36,16 @@ function Navigation() {
                 Withdraw
               </NavLink>
               <NavLink className="nav-link" to="/alldata">
-                AllData
+                All Data
               </NavLink>
             </Nav>
           </Navbar.Collapse>
+          <NavLink
+            className="btn btn-primary create-account-btn"
+            to="/createaccount"
+          >
+            Create Account
+          </NavLink>
         </Container>
       </Navbar>
     </>
