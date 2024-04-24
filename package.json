@@ -1,7 +1,6 @@
 {
   "name": "mit-pro-frontend-banking-application",
   "version": "0.1.0",
-  "homepage": "https://jrparente.github.io/mit-pro-frontend-banking-application/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -40,8 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^6.1.1"
   }
 }
