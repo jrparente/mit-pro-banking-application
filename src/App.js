@@ -13,7 +13,7 @@ function App() {
       <Navigation />
       <Container className="mt-5 mb-5">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/createaccount" element={<CreateAccount />} />
           <Route path="/deposit" element={<Deposit />} />
           <Route path="/withdraw" element={<Withdraw />} />
