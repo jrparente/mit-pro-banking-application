@@ -10,7 +10,7 @@
 <br />
 <div align="center">
 
-<h3 align="center">Front End Banking Application</h3>
+<h3 align="center">Full Stack Banking Application</h3>
 </div>
 
 <!-- ABOUT THE PROJECT -->
@@ -19,7 +19,7 @@
 
 ![Product Name Screen Shot][product-screenshot]
 
-Created for the **MIT xPRO Professional Certificate in Coding: Fullstack Development with MERN**, this is a front end banking application that allows users to create an account, and perform basic banking operations such as deposit and withdrawal. The application is built using React, Next.js, and Bootstrap.
+Created for the **MIT xPRO Professional Certificate in Coding: Fullstack Development with MERN**, this is a Full Stack banking application that allows users to create an account, and perform basic banking operations such as deposit and withdrawal. The application is built using React, Next.js, and Bootstrap.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
