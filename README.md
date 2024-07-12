@@ -35,8 +35,8 @@ This is a full-stack banking application developed as part of the **MIT Professi
 ### Built With
 
 - **Frontend:** [![React][React.js]][React-url]
-- **Backend:** Node.js, Express, MongoDB
-- **Authentication:** JSON Web Tokens (JWT)
+- **Backend:** [![Node.js][Node.js]][Node.js-url], [![Express.js][Express.js]][Express.js-url], [![MongoDB][MongoDB]][MongoDB-url]
+- **Authentication:** [![JWT][JWToken]][JWToken-url]
 - **Styling:** [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -144,3 +144,11 @@ Project Link: [https://github.com/jrparente/mit-pro-frontend-banking-application
 [React-url]: https://reactjs.org/
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
+[Node.js]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
+[Node.js-url]: https://nodejs.org/en/
+[Express.js]: https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white
+[Express.js-url]: https://expressjs.com/
+[MongoDB]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
+[MongoDB-url]: https://www.mongodb.com/
+[JWToken]: https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white
+[JWToken-url]: https://jwt.io/
