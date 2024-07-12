@@ -35,12 +35,12 @@ export default function Footer() {
                 Developer Page
               </a>
               <a
-                href="https://www.heroku.com"
+                href="https://www.render.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-light"
               >
-                Deployed on Heroku
+                Deployed on Render
               </a>
             </Nav>
           </Col>
