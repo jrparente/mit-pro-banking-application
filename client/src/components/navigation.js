@@ -18,7 +18,7 @@ function Navigation() {
 
   return (
     <>
-      <Navbar expand="md" bg="light">
+      <Navbar expand="lg" bg="light">
         <Container>
           <NavLink className="navbar-brand" to="/">
             <div className="d-inline-flex align-items-center gap-1">
@@ -179,7 +179,7 @@ function Navigation() {
                   )}
                 >
                   <NavLink className="btn btn-primary" to="/dashboard">
-                    <i class="bi bi-person"></i> Dashboard
+                    <i class="bi bi-person"></i> {user.name}
                   </NavLink>
                 </OverlayTrigger>
                 <OverlayTrigger
