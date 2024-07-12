@@ -19,14 +19,25 @@
 
 ![Product Name Screen Shot][product-screenshot]
 
-Created for the **MIT xPRO Professional Certificate in Coding: Fullstack Development with MERN**, this is a Full Stack banking application that allows users to create an account, and perform basic banking operations such as deposit and withdrawal. The application is built using React, Next.js, and Bootstrap.
+This is a full-stack banking application developed as part of the **MIT Professional Certificate in Coding: Full Stack Development with MERN**. The application includes a React frontend and an Express/MongoDB backend, providing functionalities for user account management, deposits, withdrawals, and more.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Features
+
+- User account management (create, delete)
+- User authentication (login, logout)
+- User authorization (protected routes)
+- Account operations (deposit, withdraw, transfer)
+- View transaction history
+- Responsive UI with Bootstrap
+
 ### Built With
 
-- [![React][React.js]][React-url]
-- [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+- **Frontend:** [![React][React.js]][React-url]
+- **Backend:** Node.js, Express, MongoDB
+- **Authentication:** JSON Web Tokens (JWT)
+- **Styling:** [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -34,17 +45,10 @@ Created for the **MIT xPRO Professional Certificate in Coding: Fullstack Develop
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
+- Node.js
+- MongoDB
 
 ### Installation
 
@@ -54,10 +58,53 @@ This is an example of how to list things you need to use the software and how to
    ```
 2. Install NPM packages
    ```sh
-   npm install
+   cd server && npm install
+   ```
+   ```sh
+   cd client && npm install
+   ```
+3. Create a `.env` file in the `server` directory with the following environment variables:
+   ```sh
+   PORT=3001
+   JWT_SECRET=your_jwt_secret
+   MONGO_URI=your_mongodb_connection_string
+   ```
+4. Start the server
+   ```sh
+   npm start
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Running the Application
+
+- **Frontend:** The React application will be served from the client/build directory.
+- **Backend:** The server will run on the port specified in the .env file (default is 3001).
+
+## Accessing the Application
+
+Open your browser and navigate to **URL:** [http://localhost:3001](http://localhost:3001) to access the application.
+
+## Demo Accounts
+
+Use the following demo accounts to explore the application without creating a new account:
+
+- **Employee/Admin Account**
+
+  - **Username:** miranda@mail.com
+  - **Password:** 12345678
+
+- **Customer Account**
+  - **Username:** harry@maill.com
+  - **Password:** 12345678
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!--Deployment -->
+
+## Deployment
+
+The application was deployed on Render. You can access the live application [here](https://mit-pro-banking-application.onrender.com/).
 
 <!-- LICENSE -->
 
