@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/esm/Button";
 import AuthContext, { useAuth } from "../context/AuthContext";
 import { ButtonGroup, Card, Col, Dropdown, Row, Table } from "react-bootstrap";
-import Loading from "../components/loading";
+import Loading from "../components/Loading";
 import { formatCurrency } from "../utils/utils";
 
 function Dashboard() {

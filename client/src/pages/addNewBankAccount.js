@@ -1,5 +1,5 @@
 import AuthContext, { useAuth } from "../context/AuthContext";
-import Loading from "../components/loading";
+import Loading from "../components/Loading";
 import { Form, Button, Card } from "react-bootstrap";
 import { useContext, useState } from "react";
 

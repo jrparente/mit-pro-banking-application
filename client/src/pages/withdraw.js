@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import { Form, Button, Card } from "react-bootstrap";
 import AuthContext, { useAuth } from "../context/AuthContext";
-import Loading from "../components/loading";
+import Loading from "../components/Loading";
 import { formatCurrency } from "../utils/utils";
 
 export default function Withdraw() {

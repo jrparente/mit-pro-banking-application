@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { Alert, Badge, Form, Spinner, Table } from "react-bootstrap";
-import Loading from "../components/loading";
+import Loading from "../components/Loading";
 import { formatCurrency } from "../utils/utils";
 
 const getBadgeVariant = (type) => {

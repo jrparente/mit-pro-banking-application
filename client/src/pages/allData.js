@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Button from "react-bootstrap/esm/Button";
 import { useAuth } from "../context/AuthContext";
-import Loading from "../components/loading";
+import Loading from "../components/Loading";
 import { Card, Col, Row } from "react-bootstrap";
 import { formatCurrency } from "../utils/utils";
 
