@@ -19,7 +19,7 @@
 
 ![Product Name Screen Shot][product-screenshot]
 
-This is a full-stack banking application developed as part of the **MIT Professional Certificate in Coding: Full Stack Development with MERN**. The application includes a React frontend and an Express/MongoDB backend, providing functionalities for user account management, deposits, withdrawals, and more.
+This is a full-stack banking application developed as the capstone final project of the **MIT Professional Certificate in Coding: Full Stack Development with MERN**. The application includes a React frontend and an Express/MongoDB backend, providing functionalities for user account management, deposits, withdrawals, and more.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
