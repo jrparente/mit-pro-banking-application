@@ -19,7 +19,7 @@ export default function Footer() {
             <h5>Quick Links</h5>
             <Nav className="flex-column">
               <a
-                href="https://github.com/jrparente/mit-pro-frontend-banking-application"
+                href="https://github.com/jrparente/mit-pro-banking-application"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-light"
