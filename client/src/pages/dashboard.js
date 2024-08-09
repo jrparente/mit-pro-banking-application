@@ -188,7 +188,14 @@ function Dashboard() {
             <Button variant="secondary" onClick={logout}>
               Logout
             </Button>
-            <Button variant="danger" onClick={() => handleDelete(user.email)}>
+            <Button
+              variant="danger"
+              onClick={() => handleDelete(user.email)}
+              disabled={
+                user.email === "miranda@badbank.com" ||
+                user.email === "harry@mail.com"
+              }
+            >
               Delete User
             </Button>
           </div>

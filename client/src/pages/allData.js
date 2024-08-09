@@ -79,6 +79,10 @@ export default function AllData() {
                   variant="danger"
                   size="sm"
                   onClick={() => handleDelete(user.email)}
+                  disabled={
+                    user.email === "miranda@badbank.com" ||
+                    user.email === "harry@mail.com"
+                  }
                 >
                   Delete
                 </Button>
